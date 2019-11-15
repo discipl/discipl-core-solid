@@ -1,0 +1,44 @@
+{
+  "name": "discipl-core-solid",
+  "version": "0.1.0",
+  "description": "Discipl Core Solid Connector",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "babel src/ --out-dir dist",
+    "test": "nyc --reporter=html --reporter=text ./node_modules/.bin/mocha --require @babel/register ./test/**/*.spec.js",
+    "lint": "./node_modules/standard/bin/cmd.js --parser babel-eslint",
+    "lint-fix": "./node_modules/standard/bin/cmd.js --parser babel-eslint --fix",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/codecov/bin/codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discipl/discipl-core-solid.git"
+  },
+  "author": "Bas Kaptijn",
+  "license": "GPL-3.0",
+  "files": [
+    "/src",
+    "/dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/discipl/discipl-core-solid/issues"
+  },
+  "homepage": "https://github.com/discipl/discipl-core-solid#readme",
+  "dependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "@discipl/core-baseconnector": "^0.2.2",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "rdf-namespaces": "^1.6.0",
+    "sinon": "^7.5.0",
+    "standard": "^14.3.1",
+    "tripledoc": "^2.4.0"
+  }
+}

@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "lts/*"
+addons:
+  sonarcloud:
+    organization: "discipl" # the key of the org you chose at step #3
+before_script:
+  - if [ ! -z "$NLX_KEY" ]; then echo "$NLX_KEY" > ./system-test/certs/org.key; fi
+script:
+  - npm run lint
+  - npm test
+after_success:
+  - npm run coverage
+  - 'if [ ! -z "$SONAR_TOKEN" ]; then sonar-scanner; fi'
