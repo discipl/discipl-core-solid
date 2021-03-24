@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/discipl/discipl-core-solid#readme",
   "dependencies": {
-    "@babel/cli": "^7.7.0",
+    "@babel/cli": "^7.13.10",
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/register": "^7.7.0",

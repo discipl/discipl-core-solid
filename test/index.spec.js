@@ -5,10 +5,9 @@ import { expect } from 'chai'
 import SolidConnector from '../src/index'
 
 // import sinon from 'sinon'
-
-const webId = 'https://bkaptijn.solid.community/profile/card#me'
-const ref1 = 'https://bkaptijn.solid.community/profile/card#me::http://xmlns.com/foaf/0.1/name'
-const ref2 = 'https://bkaptijn.solid.community/profile/card#me::http://xmlns.com/foaf/0.1/organisation'
+const webId = 'https://bkaptijn.solidweb.org/profile/card#me'
+const ref1 = 'https://bkaptijn.solidweb.org/profile/card#me::http://xmlns.com/foaf/0.1/name'
+const ref2 = 'https://bkaptijn.solidweb.org/profile/card#me::http://xmlns.com/foaf/0.1/organisation'
 
 describe('discipl-solid-connector', () => {
   it('should present a name', async () => {
@@ -34,7 +33,7 @@ describe('discipl-solid-connector', () => {
         expect.fail(null, null, 'No exception raised when writing to pod unauthorised')
       })
       .catch((e) => {
-        expect(e.message).to.equal('Web error: 401 (Unauthenticated) on PATCH of <https://bkaptijn.solid.community/profile/card>')
+        expect(e.message).to.equal('Web error: 401 (Unauthenticated) on PATCH of <https://bkaptijn.solidweb.org/profile/card>')
       })
   })
 
