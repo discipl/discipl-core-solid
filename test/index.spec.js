@@ -23,7 +23,7 @@ describe('discipl-solid-connector', () => {
   it('should be able to read a public profile', async () => {
     const solidConnector = new SolidConnector()
     const value = await solidConnector.get(ref1)
-    expect(value).to.equal('Bas Kaptijn')
+    expect(value).to.equal('Steven Gort')
   })
 
   it('should get an unauthorised exception when writing to a public profile (when unauthorised)', async () => {
